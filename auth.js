@@ -4,5 +4,7 @@ export async function getUser(id, database) {
 
     const result = await database.query(query);
 
+    console.log("User password:", result.rows[0].password);
+
     return result.rows[0].name;
 }
